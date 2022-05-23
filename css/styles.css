@@ -1,13 +1,54 @@
+:root {
+    --color-primary: #blue; /* Assign our primary here */
+    --color-secondary: #red; /* Assign our secondary here */
+    --color-headings: #purple; /* Assign our heading color here */
+    --color-body: #white;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/* Typography */
+html {
+    /* 62,5% of 16px = 10px  // this does so 1rem = 10px*/
+    font-size: 62.5%;
+}
+
+/* Navbar */
 .nav {
-    background: blue;
-    color: #000;
-    height: 50px;
+    background: #000;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between; /* makes the logo and nav-links go to each corner */
+    flex-wrap: wrap;
+    padding: 0 1rem;
     align-items: center;
-    font-size: 20px;
 }
 
 .nav img {
     height: 30px;
+}
+
+.nav__list {
+    width: 100%;
+    margin: 0;
+}
+  
+.nav__item {
+    /* Mobile-view, puts padding horizontal and vertical and gives a line under each link */
+    padding: 0.5rem 2rem;
+    border-bottom: 1px solid #222;
+}
+  
+.nav__item > a {
+    /* changes color of links */
+    color: #d2d0db;
+    transition: color 0.3s;
+}
+  
+.nav__item > a:hover {
+    /* Changes color when hovering over links */
+    color: #fff;
 }
