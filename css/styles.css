@@ -1,8 +1,7 @@
 :root {
-    --color-primary: #blue; /* Assign our primary here */
-    --color-secondary: #red; /* Assign our secondary here */
+    --color-primary: #242F9B; /* Assign our primary here */
+    --color-secondary: #DBDFFD; /* Assign our secondary here */
     --color-headings: #purple; /* Assign our heading color here */
-    --color-body: #white;
 }
 
 *,
@@ -12,43 +11,114 @@
 }
 
 /* Typography */
-html {
-    /* 62,5% of 16px = 10px  // this does so 1rem = 10px*/
-    font-size: 62.5%;
+
+body {
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Navbar */
-.nav {
-    background: #000;
+nav {
     display: flex;
-    justify-content: space-between; /* makes the logo and nav-links go to each corner */
-    flex-wrap: wrap;
-    padding: 0 1rem;
+    justify-content: space-around;
     align-items: center;
+    min-height: 8vh;
+    background-color: var(--color-primary);
+    font-family: 'Poppins', sans-serif;
+
 }
 
-.nav img {
-    height: 30px;
+.logo {
+    color: var(--color-secondary);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
 }
 
-.nav__list {
-    width: 100%;
-    margin: 0;
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
 }
-  
-.nav__item {
-    /* Mobile-view, puts padding horizontal and vertical and gives a line under each link */
-    padding: 0.5rem 2rem;
-    border-bottom: 1px solid #222;
+
+.nav-links li {
+    list-style: none;
 }
-  
-.nav__item > a {
-    /* changes color of links */
-    color: #d2d0db;
-    transition: color 0.3s;
+
+.nav-links a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
 }
-  
-.nav__item > a:hover {
-    /* Changes color when hovering over links */
-    color: #fff;
+
+.burger {
+    display: none;
 }
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(226, 226, 226);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 7vh;
+        background-color: var(--color-primary);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width:50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px,-6px);
+} 
