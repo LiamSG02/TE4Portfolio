@@ -168,7 +168,7 @@ nav {
 }
 
 .about-grid{
-    background-color: #242F9B;
+    background-color: #7e0557;
     display: grid;
     grid-template-columns:1fr 5fr 1fr;
     grid-template-rows: 50px 500px 50px;
@@ -180,6 +180,23 @@ nav {
 .about-grid .about-context{
     grid-column-start: 2;
     grid-row-start: 2;
+    color:rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+.about-context > img{
+    margin: 20px;
+}
+.about-context > p{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.about-context .timeline {
+    text-align: right;
+}
+.about-context .timelinebutton{
+    margin-right: 20px;
+    text-align: right;
 }
 
 @media screen and (max-width: 768px) {
