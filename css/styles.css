@@ -1,5 +1,5 @@
 :root {
-    --color-primary: #242F9B; /* Assign our primary here */
+    --color-primary: #7e0556; /* Assign our primary here */
     --color-secondary: #DBDFFD; /* Assign our secondary here */
     --color-headings: #9BA3EB; /* Assign our heading color here */
     --color-body: #DBDFFD;
@@ -21,6 +21,9 @@ body {
 
 h1 {
     color: var(--color-secondary);
+}
+a{
+    text-decoration: none;
 }
 
 /* Navbar */
@@ -240,14 +243,24 @@ nav {
 }
 
 .about-grid{
-    background-color: #7e0557;
+    background: linear-gradient(to top, #a7097281, #a7097281),
+    url("../images/aboutBG.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: grid;
     grid-template-columns:1fr 5fr 1fr;
-    grid-template-rows: 50px 500px 50px;
+    grid-template-rows: 100px auto 60px;
 }
 .about-grid h2{
+    font-size: 3em;
+    font-weight: bold;
     grid-column-start: 1;
     grid-row-start: 1;
+    position: absolute;
+    color: white;
+    margin-left: 25px;
+    margin-top: 25px;
 }
 .about-grid .about-context{
     grid-column-start: 2;
@@ -255,6 +268,8 @@ nav {
     color:rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
+    text-align: justify;
+    line-height: 20px;
 }
 .about-context > img{
     margin: 20px;
@@ -262,6 +277,8 @@ nav {
 .about-context > p{
     margin-left: 20px;
     margin-right: 20px;
+    font-size: 0.8em;
+    opacity: 0.7;
 }
 .about-context .timeline {
     text-align: right;
@@ -269,7 +286,28 @@ nav {
 .about-context .timelinebutton{
     margin-right: 20px;
     text-align: right;
+    transition: all ease 500ms;
+    width: 200px;
+    float: right;
+    padding-bottom: 25px;
+
 }
+.about-context .timelinebutton:hover{
+    transform: translateY(-5px);
+}
+.about-context .timelinebutton span:hover{
+    box-shadow: 5px 5px rgba(36, 48, 155, 0.705);
+}
+.about-context .timelinebutton span{
+    transition: all ease 500ms;
+    background-color: #242F9B;
+    color: white;
+    margin-right: 5px;
+    border-radius: 5px;
+    padding: 4px 10px 4px 10px;
+}
+
+
 
 @media screen and (max-width: 768px) {
     .about-grid h2{
@@ -338,13 +376,18 @@ nav {
 
 .crew-grid{
     background-color: #242F9B;
-    padding: 100px;
+    padding: 10px;
 }
 .crew-grid .crew-grid-students{
     display: grid;
-    gap: 40px;
+    gap: 10px;
+    margin: 0px 60px;
     grid-template-columns:1fr 1fr 1fr;
-    grid-template-rows: 300px 300px;
+    grid-template-rows: 450px;
+}
+
+.headings {
+    text-align: center;
 }
 
 .footer-grid{
@@ -371,3 +414,47 @@ nav {
     grid-row-start: 4;
     grid-column-start: 3;
 }
+.polaroid{
+    margin: auto;
+}
+
+.polaroid a {
+    background: #ffffff;
+    display: inline-block;
+    padding: 15px 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+    -webkit-transition: all .20s linear;
+    -moz-transition: all .20s linear;
+    transition: all .20s linear;
+    z-index: 0;
+    position: relative;
+  }
+  
+  .polaroid a:after {
+    color: #333;
+    font-size: 25px;
+    content: attr(title);
+    position: relative;
+    top: 15px;
+  }
+  
+  .polaroid img {
+    display: block;
+    width: 250px;
+    height: 300px;
+  } 
+
+  
+ .polaroid a:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+    z-index: 10;
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+    -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+  }
