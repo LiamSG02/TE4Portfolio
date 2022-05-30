@@ -1,8 +1,8 @@
 :root {
-  --color-primary: #242f9b; /* Assign our primary here */
+  --color-primary: #7e0556; /* Assign our primary here */
   --color-secondary: #dbdffd; /* Assign our secondary here */
   --color-headings: #9ba3eb; /* Assign our heading color here */
-  --color-body: #f9f9f9;
+  --color-body: #dbdffd;
 }
 
 *,
@@ -26,6 +26,9 @@ h1 {
 
 li {
   list-style: none;
+}
+a {
+  text-decoration: none;
 }
 
 /* Navbar */
@@ -122,12 +125,85 @@ nav {
 .project {
   width: 220px;
   height: 300px;
+  box-shadow: 5px 5px 8px #000;
 }
 
 .project > img {
   height: 300px;
   width: 220px;
   border-radius: 5px;
+}
+
+.modalClick {
+  height: 300px;
+  width: 220px;
+  background-color: transparent;
+  border: none;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1024px) {
@@ -234,14 +310,24 @@ nav {
 }
 
 .about-grid {
-  background-color: #7e0557;
+  background: linear-gradient(to top, #a7097281, #a7097281),
+    url("../images/aboutBG.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
-  grid-template-rows: 50px 500px 50px;
+  grid-template-rows: 100px auto 60px;
 }
 .about-grid h2 {
+  font-size: 3em;
+  font-weight: bold;
   grid-column-start: 1;
   grid-row-start: 1;
+  position: absolute;
+  color: white;
+  margin-left: 25px;
+  margin-top: 25px;
 }
 .about-grid .about-context {
   grid-column-start: 2;
@@ -249,6 +335,8 @@ nav {
   color: rgb(0, 0, 0);
   background-color: rgb(255, 255, 255);
   border-radius: 5px;
+  text-align: justify;
+  line-height: 20px;
 }
 .about-context > img {
   margin: 20px;
@@ -256,6 +344,8 @@ nav {
 .about-context > p {
   margin-left: 20px;
   margin-right: 20px;
+  font-size: 0.8em;
+  opacity: 0.7;
 }
 .about-context .timeline {
   text-align: right;
@@ -263,6 +353,24 @@ nav {
 .about-context .timelinebutton {
   margin-right: 20px;
   text-align: right;
+  transition: all ease 500ms;
+  width: 200px;
+  float: right;
+  padding-bottom: 25px;
+}
+.about-context .timelinebutton:hover {
+  transform: translateY(-5px);
+}
+.about-context .timelinebutton span:hover {
+  box-shadow: 5px 5px rgba(36, 48, 155, 0.705);
+}
+.about-context .timelinebutton span {
+  transition: all ease 500ms;
+  background-color: #242f9b;
+  color: white;
+  margin-right: 5px;
+  border-radius: 5px;
+  padding: 4px 10px 4px 10px;
 }
 
 @media screen and (max-width: 768px) {
@@ -327,6 +435,49 @@ nav {
 
 .crew-grid {
   background-color: #242f9b;
+  padding: 10px;
+}
+.crew-grid .crew-grid-students {
+  display: grid;
+  gap: 10px;
+  margin: 0px 60px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 450px;
+}
+
+.headings {
+  text-align: center;
+}
+
+.footer-grid {
+  background-color: black;
+  padding: 100px;
+  padding-bottom: 50px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 150px 150px 150px 150px;
+  margin: 0 0;
+}
+.mentor-grid .cards .Linda {
+  grid-row-start: 1;
+  grid-column-start: 2;
+  background-color: #242f9b;
+}
+.mentor-grid .cards .Josef {
+  grid-row-start: 2;
+  grid-column-start: 2;
+}
+.mentor-grid .cards .Ahmed {
+  grid-row-start: 3;
+  grid-column-start: 2;
+}
+.mentor-grid .cards-context {
+  grid-row-start: 4;
+  grid-column-start: 2;
+}
+
+.crew-grid {
+  background-color: #242f9b;
   padding: 100px;
 }
 .crew-grid .crew-grid-students {
@@ -359,4 +510,47 @@ nav {
 
   grid-row-start: 4;
   grid-column-start: 3;
+}
+.polaroid {
+  margin: auto;
+}
+
+.polaroid a {
+  background: #ffffff;
+  display: inline-block;
+  padding: 15px 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  z-index: 0;
+  position: relative;
+}
+
+.polaroid a:after {
+  color: #333;
+  font-size: 25px;
+  content: attr(title);
+  position: relative;
+  top: 15px;
+}
+
+.polaroid img {
+  display: block;
+  width: 250px;
+  height: 300px;
+}
+
+.polaroid a:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  transform: scale(1.2);
+  z-index: 10;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
 }

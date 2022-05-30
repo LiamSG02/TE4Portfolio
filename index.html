@@ -10,6 +10,8 @@
      <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="css/normalize.css"/>
      <link rel="stylesheet" href="css/styles.css"/>
+     
+     <script src="app.js"></script>
  </head>
     <body>
 
@@ -40,23 +42,139 @@
             <h2>< /Projects ></h2>
             <section class="header-grid">
 
+                <button class="modalClick" onClick="openModal('wassim')" data-toggle="modal">
                 <div class="project">
-                    <img id="wassim" src="./images/pizza-wassim.PNG">
-                    <label for="wassim"> Pizzeria Venezia</label>
+                    <img src="./images/pizza-wassim.PNG" alt="pizzera venezia">
                 </div>
+            </button>
+
+<!-- The Modal -->
+<div class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Some text in the Modal..</p>
+    </div>
+  
+  </div>
+
+            <button class="modalClick" onClick="openModal('adrian')" data-toggle="modal">
                 <div class="project">
-                    <img id="adrian" src="./images/pizza-adrian.PNG">
-                    <label for="adrian">Pizzeria Venezia</label>
+                    <img src="./images/pizza-adrian.PNG" alt="pizzeria venezia">
                 </div>
-                <div class="project"></div>
-                <div class="project"></div>
-                <div class="project"></div>
-                <div class="project"></div>
-                <div class="project"></div>
-                <div class="project"></div>
+            </button>
+
+            <div class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <p>Some text in the Modal..</p>
+                </div>
+              
+              </div>
+
+              <button class="modalClick" onClick="openModal('polisapp')" data-toggle="modal">
+                <div class="project">
+                    <p>Polisapp</p>
+                </div>
+                </button>
+
+                <div class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span class="close">&times;</span>
+                      <p>Some text in the Modal..</p>
+                    </div>
+                  
+                  </div>
+
+                  <button class="modalClick" onClick="openModal('väderkollen')" data-toggle="modal">
+                <div class="project">
+                    <p>Väderkollen</p>
+                </div>
+            </button>
+
+                <div class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span class="close">&times;</span>
+                      <p>Some text in the Modal..</p>
+                    </div>
+                  
+                  </div>
+
+                  <button class="modalClick" onClick="openModal('schizomania')" data-toggle="modal">
+                <div class="project">
+                    <p>Schizomania</p>
+                </div>
+            </button>
+
+
+                <div class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span class="close">&times;</span>
+                      <p>Some text in the Modal..</p>
+                    </div>
+                  
+                  </div>
+
+                  <button class="modalClick" onClick="openModal('individuella')" data-toggle="modal">
+                <div class="project">
+                    <p>Individuella</p>
+                </div>
+                </button>
+
+                <div class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span class="close">&times;</span>
+                      <p>Some text in the Modal..</p>
+                    </div>
+                  
+                  </div>
+                
+                  <button class="modalClick" onClick="openModal('basecamp')" data-toggle="modal">
+                <div class="project">
+                    <p>Basecamp</p>
+                </div>
+                </button>
+
+                <div class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span class="close">&times;</span>
+                      <p>Some text in the Modal..</p>
+                    </div>
+                  
+                  </div>
+
+                  <button class="modalClick" onClick="openModal('examensarbete')" data-toggle="modal">
+                <div class="project">
+                    <p>Examensarbete</p>
+                </div>
+                </button>
+
+                <div class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span class="close">&times;</span>
+                      <p>Some text in the Modal..</p>
+                    </div>
+                  
+                </div>
+
             </section>
             <section class="about-grid">
-                <h2>< /About ></h2>
+                <h2> < /About ></h2>
                 <div class="about-context">
                     <img src="./images/NTIgymnasiet.png" style width="200px">
                     <p>
@@ -107,49 +225,81 @@ I said
 
                     </p>
                     <p class="timeline" style="text-decoration: underline;">
-                        TE4 TIMELINE
+                
                     </p>
                     <div class="timelinebutton">
-                        <a href="https://www.youtube.com/watch?v=iik25wqIuFo" button style="color:aqua" type="button">Click Me!</button>
+                        <a href="https://www.youtube.com/watch?v=iik25wqIuFo" button style="color:aqua" type="button"><span> TE4 TIMELINE</span></a></button>
                        
                     </div>
                 </div>
             </section>
             
-            <section class="mentor-grid">
-                <h2 >< /Mentors ></h2>
-                <div class="cards">
-                    <div class="Linda" style="background-color: antiquewhite; width :50px;">111111111</div>
-                    <div class="Josef" style="background-color: orange; width :50px;">111111111</div>
-                    <div class="Ahmed" style="background-color: yellow; width :50px;">11111</div>
-                    <div class="cards-context" style="background-color: black;">11111</div>
-                </div>
-            </section>
-
+            <h2 class="headings">Mentors</h2>
             <section class="crew-grid">
                 <div class="crew-grid-students">
-                    <div style="background-color: antiquewhite;">1</div>
-                    <div style="background-color: orange;">1</div>
-                    <div style="background-color: yellow">1</div>
-
-                    <div style="background-color: black">1</div>
-                    <div style="background-color: orange;">1</div>
-                    <div style="background-color: yellow">1</div>
+                    <div class="polaroid">
+                        <a href="#" title="Ahmed">
+                            <img height="250" src="/images/Ahmed.png" alt="Santorini" title="Santorini" />
+                        </a>
+                    </div>
+                    
+            
+                    <div class="polaroid">
+                        <a href="#" title="Linda">
+                            <img height="250" src="/images/Linda.png" alt="Santorini" title="Santorini" />
+                        </a>
+                    </div>
+            
+                    <div class="polaroid">
+                        <a href="#" title="Josef">
+                            <img height="250" src="/images/Josef.png" alt="Santorini" title="Santorini" />
+                        </a>
+                    </div>
                 </div>
             </section>
-            <section class="footer-grid">
-                <div class="footer-grid-links">
-                    <div style="background-color: antiquewhite;">21</div>
-                </div>
-                <div class="footer-grid-Icon">
-                    <div style="background-color: green;">1</div>
-                </div>
-                <div class="footer-grid-Media">
-                    <div style="background-color: green;">1</div>
+            <h2 class="headings">Crew</h2>
+            <section class="crew-grid">
+                <div class="crew-grid-students">
+                    <div class="polaroid">
+                        <a href="#" title="Wassim">
+                            <img height="250" src="/images/Ahmed.png" alt="Santorini" title="Santorini" />
+                        </a>
+                    </div>
+                    
+            
+                    <div class="polaroid">
+                        <a href="#" title="Liam">
+                            <img height="250" src="/images/Linda.png" alt="Santorini" title="Santorini" />
+                        </a>
+                    </div>
+            
+                    <div class="polaroid">
+                        <a href="#" title="Adrian">
+                            <img height="250" src="/images/Josef.png" alt="Santorini" title="Santorini" />
+                        </a>
+                    </div>
+
+                    <div class="polaroid">
+                        <a href="#" title="Charlie">
+                            <img height="250" src="/images/Ahmed.png" alt="Santorini" title="Santorini" />
+                        </a>
+                    </div>
+                    
+            
+                    <div class="polaroid">
+                        <a href="#" title="Oliver">
+                            <img height="250" src="/images/Linda.png" alt="Santorini" title="Santorini" />
+                        </a>
+                    </div>
+            
+                    <div class="polaroid">
+                        <a href="#" title="Linnea">
+                            <img height="250" src="/images/Josef.png" alt="Santorini" title="Santorini" />
+                        </a>
+                    </div>
                 </div>
             </section>
             
 
-            <script src="app.js"></script>
     </body> 
 </html> 
