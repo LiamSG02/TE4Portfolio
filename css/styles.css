@@ -315,13 +315,18 @@ nav {
 
 .crew-grid{
     background-color: #242F9B;
-    padding: 100px;
+    padding: 10px;
 }
 .crew-grid .crew-grid-students{
     display: grid;
-    gap: 40px;
+    gap: 10px;
+    margin: 0px 60px;
     grid-template-columns:1fr 1fr 1fr;
-    grid-template-rows: 300px 300px;
+    grid-template-rows: 450px;
+}
+
+.headings {
+    text-align: center;
 }
 
 .footer-grid{
@@ -348,3 +353,47 @@ nav {
     grid-row-start: 4;
     grid-column-start: 3;
 }
+.polaroid{
+    margin: auto;
+}
+
+.polaroid a {
+    background: #ffffff;
+    display: inline-block;
+    padding: 15px 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+    -webkit-transition: all .20s linear;
+    -moz-transition: all .20s linear;
+    transition: all .20s linear;
+    z-index: 0;
+    position: relative;
+  }
+  
+  .polaroid a:after {
+    color: #333;
+    font-size: 25px;
+    content: attr(title);
+    position: relative;
+    top: 15px;
+  }
+  
+  .polaroid img {
+    display: block;
+    width: 250px;
+    height: 300px;
+  } 
+
+  
+ .polaroid a:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+    z-index: 10;
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+    -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+  }
