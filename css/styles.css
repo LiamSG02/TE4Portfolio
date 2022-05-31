@@ -156,26 +156,16 @@ nav {
   }
   
   /* Modal Content/Box */
-  .modal-content {
-    background-color: rgba(0,0,0,0.9);
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 90%; /* Could be more or less, depending on screen size */
-    border-radius: 10px;
-    text-align: center;
-    padding-bottom: 100px;
-  }
+
 
   /* The Close Button */
-  .close {
+  .modal .modal-content .modal-header .close {
     float: right;
     font-size: 28px;
     font-weight: bold;
   }
   
-  .close:hover,
-  .close:focus {
+  .modal .modal-content .modal-header .close:focus {
     color: grey;
     text-decoration: none;
     cursor: pointer;
@@ -192,39 +182,12 @@ nav {
 }
 
 /* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
+.modal .modal-content {
+  background-color: black;
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-  -webkit-animation-name: animatetop;
-  -webkit-animation-duration: 0.4s;
-  animation-name: animatetop;
-  animation-duration: 0.4s;
-}
-
-/* Add Animation */
-@-webkit-keyframes animatetop {
-  from {
-    top: -300px;
-    opacity: 0;
-  }
-  to {
-    top: 0;
-    opacity: 1;
-  }
-}
-
-@keyframes animatetop {
-  from {
-    top: -300px;
-    opacity: 0;
-  }
-  to {
-    top: 0;
-    opacity: 1;
-  }
+  width: 85%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button */
@@ -245,10 +208,10 @@ nav {
   .rolls{
       height:200px;
       width: 200px;
-      align-items: center;
       background-color: #fff;
       display: inline-block;
       margin-right: 100px;
+      align-content: center;
   }
 
   .header-rolls{
