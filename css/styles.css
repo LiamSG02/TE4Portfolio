@@ -55,14 +55,14 @@ nav {
 .logo {
   color: var(--color-secondary);
   text-transform: uppercase;
-  letter-spacing: 5px;
   font-size: 20px;
-  margin-left: 40px;
+  margin: auto;
 }
 
 .nav-links {
   margin: auto;
   display: flex;
+  text-transform: uppercase;
 }
 
 .nav-links li {
@@ -234,9 +234,15 @@ nav {
   .nav-links li {
     opacity: 0;
   }
+  .logo {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
 
   .burger {
     display: block;
+    grid-column-start: 3;
+    margin: auto;
   }
 }
 
@@ -266,13 +272,136 @@ nav {
 }
 /* Hero */
 .hero {
+  position: relative;
   height: 100vh; /* This is temporary, change to either auto or more fine tuned px*/
-  background: linear-gradient(to bottom right, #9262b2b4, #7e0558b4),
+  background: linear-gradient(to bottom right, #9262b2b4, #8d0763af),
     url("../images/Te4GroupPhoto.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
+.hero .hero-content {
+  display: grid;
+  height: 100%;
+  margin-top: 10%;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: auto auto 1fr;
+  text-align: center;
+  text-transform: uppercase;
+}
+.hero .hero-logo {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  text-align: center;
+}
+.hero .hero-logo img {
+  height: 200px;
+}
+.hero .hero-slogan {
+  margin: 0;
+  margin-left: 100px;
+  grid-column-start: 2;
+  grid-row-start: 3;
+}
+.hero .hero-slogan h2 {
+  font-size: 4em;
+  text-shadow: -10px -10px #a10c7094;
+  margin: 0;
+}
+.hero .seperator {
+  width: 100%;
+  margin-top: 10px;
+  height: 2px;
+  background-color: white;
+  grid-column-start: 2;
+  grid-row-start: 2;
+  border-radius: 5px;
+}
+.hero .hero-title {
+  margin: 0;
+  margin-left: 100px;
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+.hero .hero-title h2 {
+  font-size: 4em;
+  text-shadow: -5px -5px #a10c7094;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .hero .hero-content {
+    margin-top: 50%;
+  }
+  .hero .hero-logo {
+    grid-column-start: 2;
+    grid-row-start: 1;
+  }
+  .hero .hero-logo img {
+    width: 100%;
+  }
+  .hero .hero-slogan {
+    margin: 0;
+    grid-column-start: 2;
+    grid-row-start: 3;
+  }
+  .hero .hero-slogan h2 {
+    font-size: 2em;
+    text-shadow: -2px -2px #a10c7094;
+    margin: 0;
+    padding: 5px;
+  }
+  .hero .hero-title {
+    margin: 0;
+    grid-column-start: 2;
+    grid-row-start: 2;
+  }
+  .hero .hero-title h2 {
+    font-size: 2em;
+    text-shadow: -5px -5px #a10c7094;
+    margin-bottom: 0;
+    float: left;
+    opacity: 0.9;
+  }
+  .hero .hero-description {
+    grid-column-start: 2;
+    grid-row-start: 3;
+    margin-top: 35px;
+  }
+  .hero .hero-description p {
+    text-align: justify;
+    opacity: 0.8;
+    font-size: 0.8em;
+    text-shadow: 1px 1px black;
+  }
+}
+/*      Paused                  */
+/* .hero .carousel {
+  display: flex;
+  justify-content: center;
+}
+.hero .carousel a {
+  width: 450px;
+  height: 350px;
+  margin: 30px;
+}
+.hero .carousel .galleryBox img {
+  height: inherit;
+  width: inherit;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.hero .carousel :nth-child(2) {
+  width: 550px;
+  height: 450px;
+  margin-top: 0;
+}
+@media screen and (max-width: 1024px) {
+  .hero .carousel {
+    display: none;
+  }
+} */
+/*                           */
 /* Blocks */
 .block {
   padding: 60px 20px;
