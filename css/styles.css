@@ -314,7 +314,7 @@ nav {
 }
 
 .crew-grid{
-    background-color: #242F9B;
+    background-color: var(--color-primary);
     padding: 10px;
 }
 .crew-grid .crew-grid-students{
