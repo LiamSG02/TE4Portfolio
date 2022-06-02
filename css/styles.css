@@ -670,6 +670,9 @@ nav {
         margin: 10px;
         gap: 20px;
     }
+    .mentor-grid {
+      grid-template-columns: 1fr;
+    }
   }
 
 .headings {
