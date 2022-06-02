@@ -16,7 +16,7 @@
 body {
   font-family: "Poppins", sans-serif;
   /* background: var(--color-body); */
-  background: #9262b1;
+  background: #fff;
   color: var(--color-secondary);
 }
 
@@ -135,7 +135,7 @@ nav {
 }
 
 .modalClick{
-    height: 300px;
+  height: 300px;
     width: 220px;
     border: none;
     background-color: transparent;
@@ -451,7 +451,7 @@ nav {
   grid-template-rows: 300px 300px;
   gap: 20px;
   margin: 20px 20px;
-  padding-bottom: 55px;
+  padding-bottom: 60px;
 }
 @media screen and (max-width: 768px) {
   .header-grid {
@@ -711,4 +711,28 @@ nav {
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
   -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+.profileBody{
+  position: relative;
+  /* This is temporary, change to either auto or more fine tuned px*/
+  background: linear-gradient(to bottom right, #9262b2b4, #8d0763af),
+    url("../images/profileBackground.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+ 
+}
+
+.profile-content{
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 80%;
+  margin: auto;
+}
+
+.profileImg{
+  height:240px;
+  width:190px;
+  border-radius: 50%;
+  margin: 40px 0px 0px 100px;
 }
