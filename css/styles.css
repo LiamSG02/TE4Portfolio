@@ -460,7 +460,7 @@ nav {
 }
 
 .about-grid {
-  background: linear-gradient(to top, #a7097281, #a7097281),
+  background: linear-gradient(to bottom right, #9262b2b4, #8d0763af),
     url("../images/aboutBG.jpg");
   background-size: cover;
   background-position: center;
@@ -470,14 +470,9 @@ nav {
   grid-template-rows: 100px auto 60px;
 }
 .about-grid h2 {
-  font-size: 3em;
-  font-weight: bold;
-  grid-column-start: 1;
-  grid-row-start: 1;
-  position: absolute;
   color: white;
-  margin-left: 25px;
-  margin-top: 25px;
+  grid-row-start: 1;
+  grid-column-start: 2;
 }
 .about-grid .about-context {
   grid-column-start: 2;
@@ -612,12 +607,24 @@ nav {
   grid-template-columns: 1fr 1fr 1fr;
   margin: 50px;
 }
+#mentor{
+  color:black;
+}
 
 .crew-grid {
-  background-color: var(--color-primary);
   padding: 10px;
 }
+#crew{
+  color:white;
+  background: linear-gradient(to bottom right, #9262b2b4, #8d0763af),
+    url("../images/profileBackground.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
 .crew-grid .crew-grid-students {
+  
   display: grid;
   gap: 10px;
   margin: 50px;
@@ -667,12 +674,18 @@ nav {
     .mentor-grid {
       grid-template-columns: 1fr;
     }
+  }
 
 .headings {
   text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  white-space: nowrap;
+  font-size: 1.5em;
 }
 
 .footer-grid {
+  text-transform: uppercase;
   background-color: black;
   padding: 100px;
   padding-bottom: 50px;
@@ -837,4 +850,5 @@ nav {
   grid-template-columns: 1fr;
   grid-template-rows: 50px 50px 50px 50px;
   margin: 0 0;
+}
 }
