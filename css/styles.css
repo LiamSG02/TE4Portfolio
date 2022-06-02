@@ -606,61 +606,11 @@ nav {
 }
 
 .mentor-grid {
-  padding: 50px;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 50px 300px;
-}
-.mentor-grid .cards {
-  grid-row-start: 2;
-  display: grid;
-  gap: 75px;
-  grid-template-columns: 1fr 1fr 1fr 3fr;
-  grid-template-rows: 300px;
-  margin: auto 100px;
-}
-
-@media screen and (max-width: 768px) {
-  .mentor-grid {
-    padding-bottom: 300px;
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 50px 300px 100px;
-  }
-  .mentor-grid h2 {
-    grid-row-start: 1;
-    grid-column-start: 1;
-  }
-  .mentor-grid .cards {
-    grid-row-start: 2;
-    gap: 20px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 150px 150px 150px 150px;
-    margin: 0 0;
-  }
-  .mentor-grid .cards .Linda {
-    grid-row-start: 1;
-    grid-column-start: 2;
-    background-color: #242f9b;
-  }
-  .mentor-grid .cards .Josef {
-    grid-row-start: 2;
-    grid-column-start: 2;
-  }
-  .mentor-grid .cards .Ahmed {
-    grid-row-start: 3;
-    grid-column-start: 2;
-  }
-  .mentor-grid .cards-context {
-    grid-row-start: 4;
-    grid-column-start: 2;
-  }
-}
-
-.crew-grid {
-  background-color: #242f9b;
-  padding: 10px;
+  gap: 10px;
+  row-gap: 50px;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 50px;
 }
 
 .crew-grid {
@@ -670,42 +620,58 @@ nav {
 .crew-grid .crew-grid-students {
   display: grid;
   gap: 10px;
-  margin: 0px 60px;
+  margin: 50px;
+  row-gap: 50px;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 450px;
+  grid-template-rows: repeat(6, auto);
+}
+
+@media screen and (max-width: 768px) {
+  .crew-grid-students {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .crew-grid-students :nth-child(1) {
+    grid-row-start: 1;
+    grid-column-start: 2;
+  }
+  .crew-grid-students :nth-child(2) {
+    grid-row-start: 2;
+    grid-column-start: 2;
+  }
+  .crew-grid-students :nth-child(3) {
+    grid-row-start: 3;
+    grid-column-start: 2;
+  }
+  .crew-grid-students :nth-child(4) {
+    grid-row-start: 4;
+    grid-column-start: 2;
+  }
+  .crew-grid-students :nth-child(5) {
+    grid-row-start: 5;
+    grid-column-start: 2;
+  }
+  .crew-grid-students :nth-child(6) {
+    grid-row-start: 6;
+    grid-column-start: 2;
+  }
+  .crew-grid .crew-grid-students {
+    margin: 10px;
+    gap: 20px;
+  }
 }
 
 .headings {
   text-align: center;
 }
 
-.mentor-grid .cards .Linda {
-  grid-row-start: 1;
-  grid-column-start: 2;
-  background-color: #242f9b;
-}
-.mentor-grid .cards .Josef {
-  grid-row-start: 2;
-  grid-column-start: 2;
-}
-.mentor-grid .cards .Ahmed {
-  grid-row-start: 3;
-  grid-column-start: 2;
-}
-.mentor-grid .cards-context {
-  grid-row-start: 4;
-  grid-column-start: 2;
-}
-
-.crew-grid {
-  background-color: #242f9b;
+.footer-grid {
+  background-color: black;
   padding: 100px;
-}
-.crew-grid .crew-grid-students {
+  padding-bottom: 50px;
   display: grid;
-  gap: 40px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 300px 300px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 150px 150px 150px 150px;
+  margin: 0 0;
 }
 
 .footer-grid {
@@ -855,4 +821,12 @@ nav {
   width: 190px;
   border-radius: 50%;
   margin: 40px 0px 0px 100px;
+}
+
+.profile-footer {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 50px 50px 50px;
+  margin: 0 0;
 }
