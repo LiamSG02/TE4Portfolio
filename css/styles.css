@@ -126,13 +126,26 @@ nav {
   width: 220px;
   height: 300px;
   box-shadow: 5px 5px 8px #000;
+  background: linear-gradient(to bottom right, #9262b2b4, #8d0763af),
+    url("../images/html.jpg");
+    border-radius: 10px;;
+    margin-left: 40px;
 }
 
-.project > img {
+.project > h1{
+  font-size: 80px;
+  padding: 40%;
+}
+
+label{
+  font-size: 20px;
+  margin-left: 40px;
+}
+/*.project > img {
   height: 300px;
   width: 220px;
   border-radius: 5px;
-}
+}*/
 
 .modalClick {
   height: 300px;
@@ -445,10 +458,8 @@ nav {
 .header-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 300px 300px;
+  grid-template-rows: 300px 470px;
   gap: 20px;
-  margin: 20px 20px;
-  padding-bottom: 60px;
 }
 @media screen and (max-width: 768px) {
   .header-grid {
