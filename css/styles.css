@@ -247,7 +247,7 @@ nav {
     height: auto;
     border-radius: 25px 0 0 25px;
     top: 7vh;
-    background-color: rgba(61, 60, 60, 0.582);
+    background-color: #3d3c3c94;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -308,9 +308,8 @@ nav {
 }
 .hero .hero-content {
   display: grid;
-  height: 100%;
   grid-template-columns: 1fr 5fr 1fr;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: 300px 200px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -318,46 +317,43 @@ nav {
   grid-column-start: 2;
   grid-row-start: 1;
   text-align: center;
+  padding-top: 50px;
 }
 .hero .hero-logo img {
   height: 200px;
 }
-.hero .hero-slogan {
-  margin: 0;
-  margin-left: 100px;
-  grid-column-start: 2;
-  grid-row-start: 3;
-}
-.hero .hero-slogan h2 {
-  font-size: 4em;
-  text-shadow: -10px -10px #a10c7094;
-  margin: 0;
-}
 .hero .seperator {
   width: 100%;
-  margin-top: 10px;
   height: 2px;
   background-color: white;
   grid-column-start: 2;
   grid-row-start: 2;
   border-radius: 5px;
 }
-.hero .hero-title {
-  margin: 0;
-  margin-left: 100px;
+.hero .titlesSlogan {
   grid-column-start: 2;
   grid-row-start: 2;
+  text-align: center;
+  margin-top: 100px;
+}
+.hero .hero-slogan {
+  margin: 0;
+}
+.hero .hero-slogan h2 {
+  font-size: 4em;
+  text-shadow: -10px -10px #a10c7094;
+  margin: 0;
+}
+.hero .hero-title {
+  margin: 0;
 }
 .hero .hero-title h2 {
   font-size: 4em;
   text-shadow: -5px -5px #a10c7094;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 @media screen and (max-width: 1024px) {
-  .hero .hero-content {
-    margin-top: 50%;
-  }
   .hero .hero-logo {
     grid-column-start: 2;
     grid-row-start: 1;
@@ -781,4 +777,12 @@ nav {
   width:190px;
   border-radius: 50%;
   margin: 40px 0px 0px 100px;
+}
+
+.profile-footer{
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 50px 50px 50px;
+  margin: 0 0;
 }
