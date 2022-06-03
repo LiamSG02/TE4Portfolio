@@ -16,7 +16,7 @@
 body {
   font-family: "Poppins", sans-serif;
   /* background: var(--color-body); */
-  background: #fff;
+  background-color: #3b3d40;
   color: var(--color-secondary);
 }
 
@@ -144,6 +144,7 @@ nav {
 label{
   font-size: 20px;
   margin-left: 40px;
+  color: white;
 }
 /*.project > img {
   height: 300px;
