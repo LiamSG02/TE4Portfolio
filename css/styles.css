@@ -851,6 +851,7 @@ label{
   background-color: rgba(0, 0, 0, 0.8);
   width: 80%;
   margin: auto;
+  padding:20px;
 }
 
 .profileImg {
@@ -866,15 +867,6 @@ label{
   grid-template-columns: 1fr;
   grid-template-rows: 50px 50px 50px 50px;
   margin: 0 0;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #474e5d;
-  font-family: Helvetica, sans-serif;
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -1001,3 +993,11 @@ body {
   left: 0%;
   }
 }
+.backToHomePage{
+  border:none;
+  background-color: transparent;
+  font-size: 40px;
+  margin: 20px 0px 0px 30px;
+  float: left;
+}
+
