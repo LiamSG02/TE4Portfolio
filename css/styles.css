@@ -13,6 +13,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* Typography */
@@ -112,7 +113,6 @@ nav {
   .nav-links-socials {
     display: none;
   }
-
 }
 
 .burger {
@@ -133,22 +133,28 @@ nav {
   background: linear-gradient(to bottom right, #9262b2b4, #8d0763af),
     url("../images/html.jpg");
   border-radius: 10px;
-  margin-left: 40px;
+  /* margin-left: 40px; */
 }
 
 .project:hover {
-  box-shadow: 10px 10px 12px black;
+  box-shadow: 10px -5px 0px black;
 }
 
-.project > h1 {
+.project > h3 {
   font-size: 80px;
-  padding: 40%;
+  margin: auto;
+  padding-top: 40%;
+  color: white;
 }
 
-label {
-  font-size: 20px;
-  margin-left: 40px;
-  color: white;
+.modalClick label {
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-style: italic;
+  font-size: 1.5em;
+  color: black;
+  margin: auto;
+  text-shadow: white 1px 1px;
 }
 /*.project > img {
   height: 300px;
@@ -159,6 +165,7 @@ label {
 .modalClick {
   height: 300px;
   width: 220px;
+  margin: auto;
   border: none;
   background-color: transparent;
 }
@@ -256,13 +263,37 @@ label {
   .nav-links {
     width: 60%;
   }
+
+  .modalClick {
+    height: 200px;
+    width: 120px;
+    border: none;
+    background-color: transparent;
+  }
+  .project {
+    width: 140px;
+    height: 200px;
+    background: linear-gradient(to bottom right, #9262b2b4, #8d0763af),
+      url("../images/html.jpg");
+    border-radius: 10px;
+  }
+  .project > h3 {
+    font-size: 80px;
+    /* padding: 20%; */
+    margin: 0;
+  }
+  .project > egna {
+    margin: 0;
+  }
 }
 
 @media screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
   }
-
+  .modalClick label {
+    font-size: 1em;
+  }
   .nav-links {
     position: absolute;
     right: 0px;
@@ -414,7 +445,6 @@ label {
     font-size: 0.8em;
     text-shadow: 1px 1px black;
   }
-
 }
 /*      Paused                  */
 /* .hero .carousel {
@@ -462,8 +492,6 @@ label {
   color: #7b858b;
 }
 
-
-
 /* Grids */
 .header-grid {
   display: grid;
@@ -473,9 +501,10 @@ label {
 }
 @media screen and (max-width: 768px) {
   .header-grid {
+    padding: 0 40px 40px 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 200px 200px 200px;
+    grid-template-rows: auto auto auto;
     gap: 20px;
   }
 }
