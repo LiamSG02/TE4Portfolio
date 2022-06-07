@@ -11,6 +11,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Typography */
 
 body {
@@ -108,6 +112,7 @@ nav {
   .nav-links-socials {
     display: none;
   }
+
 }
 
 .burger {
@@ -125,11 +130,12 @@ nav {
 .project {
   width: 220px;
   height: 300px;
-
   background: linear-gradient(to bottom right, #9262b2b4, #8d0763af),
     url("../images/html.jpg");
-    border-radius: 10px;;
-    margin-left: 40px;
+    border-radius: 10px;
+    margin: auto;
+    
+    
 }
 
 .project:hover{
@@ -354,13 +360,13 @@ label{
   grid-row-start: 2;
   text-align: center;
   margin-top: 100px;
+  color: white;
 }
 .hero .hero-slogan {
   margin: 0;
 }
 .hero .hero-slogan h2 {
   font-size: 4em;
-  text-shadow: -10px -10px #a10c7094;
   margin: 0;
 }
 .hero .hero-title {
@@ -368,7 +374,6 @@ label{
 }
 .hero .hero-title h2 {
   font-size: 4em;
-  text-shadow: -5px -5px #a10c7094;
   margin: 0;
 }
 
@@ -387,7 +392,6 @@ label{
   }
   .hero .hero-slogan h2 {
     font-size: 2em;
-    text-shadow: -2px -2px #a10c7094;
     margin: 0;
     padding: 5px;
   }
@@ -398,7 +402,6 @@ label{
   }
   .hero .hero-title h2 {
     font-size: 2em;
-    text-shadow: -5px -5px #a10c7094;
     margin-bottom: 0;
     float: left;
   }
@@ -413,6 +416,7 @@ label{
     font-size: 0.8em;
     text-shadow: 1px 1px black;
   }
+
 }
 /*      Paused                  */
 /* .hero .carousel {
@@ -459,6 +463,8 @@ label{
   background: #000;
   color: #7b858b;
 }
+
+
 
 /* Grids */
 .header-grid {
