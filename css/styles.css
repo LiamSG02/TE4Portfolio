@@ -913,6 +913,7 @@ nav {
   width: 80%;
   margin: auto;
   padding: 20px;
+  color:white;
 }
 
 .profileImg {
@@ -963,9 +964,9 @@ nav {
   position: absolute;
   width: 25px;
   height: 25px;
-  right: -17px;
-  background-color: white;
-  border: 4px solid #ff9f55;
+  right: -12px;
+  background-color: #9262b2b4;
+  border: 4px solid #8d0763af;
   top: 15px;
   border-radius: 50%;
   z-index: 1;
@@ -974,6 +975,7 @@ nav {
 /* Place the container to the left */
 .left {
   left: 0;
+  
 }
 
 /* Place the container to the right */
@@ -1011,7 +1013,7 @@ nav {
 
 /* Fix the circle for containers on the right side */
 .right::after {
-  left: -16px;
+  left: -13px;
 }
 
 /* The actual content */
@@ -1020,6 +1022,7 @@ nav {
   background-color: white;
   position: relative;
   border-radius: 6px;
+  box-shadow: -10px 5px 0.5px #8d0763af;
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
