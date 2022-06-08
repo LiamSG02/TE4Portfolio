@@ -816,6 +816,40 @@ nav {
     grid-row-start: 4;
     grid-column-start: 1;
   }
+
+  .profileBody {
+    color: white;
+
+    position: relative;
+    /* This is temporary, change to either auto or more fine tuned px*/
+    background: linear-gradient(to bottom right, #9262b2b4, #8d0763af),
+      url("../images/profileBackground.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .profile-content {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: auto;
+    margin: auto;
+    padding: 0;
+  }
+
+  .profileImg {
+    height: 240px;
+    width: 100%;
+    border-radius: 50%;
+    margin: 0 0;
+  }
+
+  .profile-footer {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 50px 50px 50px;
+    margin: 0 0;
+  }
 }
 
 .polaroid {
@@ -863,6 +897,8 @@ nav {
 }
 
 .profileBody {
+  color: white;
+
   position: relative;
   /* This is temporary, change to either auto or more fine tuned px*/
   background: linear-gradient(to bottom right, #9262b2b4, #8d0763af),
